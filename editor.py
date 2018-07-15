@@ -1,5 +1,6 @@
 
 import tkinter as tk
+from tkinter import filedialog
 from tkinter import *
 import sys
 import time
@@ -52,7 +53,7 @@ class Janela(tk.Frame):
         self.color_font.add_command(label='black',command=self.font5)
         self.color_font.add_command(label='white',command=self.font6)
         
-        self.formatar.add_cascade(label = 'font',menu=self.formatar1)
+        self.formatar.add_cascade(label = 'font',menu=self.box)
         self.formatar1.add_cascade(label = 'cor-font',menu=self.color_font)
         self.formatar1.add_cascade(label = 'cor-fundo',menu=self.colors)
         self.menu.add_cascade(label = 'formatar',menu=self.formatar)
@@ -65,7 +66,14 @@ class Janela(tk.Frame):
         self.text.configure(font=('serief',14,'italic'))
         self.text.pack()
 
-   
+    def box(self):
+        
+        lista = Listbox(self.master, width=15)
+        lista.pack()
+        for item in range(1,10):
+            lista.insert(END, item)
+            if lista.index(0):
+                self.text.configure(font=("helvetica",20))
 
        
     def salvar(self):
