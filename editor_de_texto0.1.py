@@ -14,6 +14,7 @@ class Editor:
 		self.windown.title("Pytext")
 		self.menu()
 		self.text()
+		print("hello")
 		self.windown.mainloop()
 
 	def menu(self):
