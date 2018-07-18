@@ -35,15 +35,13 @@ class Editor:
 		self.text.pack()
 
 	def salvar(self):
-            
-            self.texto = self.text.get(1.0,END)
-	    arq = tk.filedialog.asksaveasfilename(initialdir ="/home/jelinux/Documentos",title="Arquivos",filetype=(("todos","*.py"),("arquivos","*")))
-            with open(arq, mode = 'w')as f:
-        	f.write(self.texto)
-        	f.close()
-        return False
-
-
+		self.texto = self.text.get(1.0,END)
+		arq = tk.filedialog.asksaveasfilename(initialdir="/home/jelinux/Documentos",title="arquivos",
+			filetypes=(("Arquivos","*.txt"),("Todos","*")))
+		with open(arq,mode="w")as f:
+			f.write(self.texto)
+			f.close
+		return False
 
 	def new(self):
 		self.new = True
