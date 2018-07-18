@@ -16,7 +16,7 @@ class Janela(tk.Frame):
         self.master.title("SISTEMA")
         self.master.geometry("500x500+200+100")
         #self.master['bg'] = "grey"
-        
+        print()
         self.menus()
         self.texto()
 
