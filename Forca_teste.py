@@ -1,48 +1,14 @@
-
+import random
 class Forca:
     def __init__(self):
-        self.palavra = input('enter com um palavra\n').upper().strip()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        print()
-        
+        self.palavra = self.gerador()
         self.digitadas = []
         self.certas = []
         self.erro = 0
-       
+    def gerador(self):
+        with open("/home/jelinux/Documentos/teste.txt",mode="r")as f:
+            x = f.read().split()
+            return(random.choice(x).upper())  
     def draw_erro(self):
         if self.erro == 1:
             
@@ -66,13 +32,13 @@ class Forca:
             print('   \ /   ')
             print('   / \   ')
             print('  /   \  ')
-            
+            print(self.palavra)
             return print('Enforcado')
     
 
     def jogar(self):
-
         while True:
+            print("JOGO DA FORCA 0.1")
         
             if self.erro == 5:
                 print(self.digitadas)
