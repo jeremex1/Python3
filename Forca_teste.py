@@ -11,7 +11,7 @@ class Forca:
             return(random.choice(x).upper())  
     def draw_erro(self):
         if self.erro == 1:
-            
+            print()
             print('###( )###')
         elif self.erro == 2:
             print('###( )###')
