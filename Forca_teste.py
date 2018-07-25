@@ -8,15 +8,13 @@ class Forca:
         self.certas = []
         self.erro = 0
         self.jogar()
-       
-        
+
     def gerador(self):
         director = sys.path[0]
-
         with open(director+"/palavras.txt",mode="r")as f:
-
             x = f.read().split()
-            return(random.choice(x).upper())  
+            return(random.choice(x).upper()) 
+
     def draw_erro(self):
         if self.erro == 1:
             print()
@@ -42,6 +40,7 @@ class Forca:
             print('  /   \  ')
             print(self.palavra)
             return print('Enforcado')
+            
     def jogar(self):
         while True:
             print("JOGO DA FORCA 0.1")
