@@ -1,12 +1,20 @@
 import random
+import os.path
+import sys
 class Forca:
     def __init__(self):
         self.palavra = self.gerador()
         self.digitadas = []
         self.certas = []
         self.erro = 0
+        self.jogar()
+       
+        
     def gerador(self):
-        with open("/home/jelinux/Documentos/teste.txt",mode="r")as f:
+        director = sys.path[0]
+
+        with open(director+"/palavras.txt",mode="r")as f:
+
             x = f.read().split()
             return(random.choice(x).upper())  
     def draw_erro(self):
@@ -34,8 +42,6 @@ class Forca:
             print('  /   \  ')
             print(self.palavra)
             return print('Enforcado')
-    
-
     def jogar(self):
         while True:
             print("JOGO DA FORCA 0.1")
@@ -71,4 +77,4 @@ class Forca:
                     self.draw_erro()
 
 x = Forca()
-x.jogar()
+
