@@ -63,7 +63,7 @@ class Cores(tk.Frame, cor.Cores, menu.Menu):
                     self.listbox.itemconfigure(tk.END, background=hexa, foreground=hexa)"""
                 self.listbox.itemconfigure(END, background=hexa)
 
-
+        return False
     def copy(self,x):
         self.posision_cur=self.listbox.curselection()
         self.clipboard_clear()
@@ -82,11 +82,13 @@ class Cores(tk.Frame, cor.Cores, menu.Menu):
             self.text.delete(1.0, END)
 
     def background_text(self):
+
+        
         self.layout()
         self.tela.title("BACKGROUND COLOR")
         self.message = tk.messagebox.askyesno("Color Background","deseja altera a cor de fundo")
         if (self.message==True):
-            self.text.configure(bg = self.corente_cor)
+        	self.text.configure(bg = self.corente_cor)
     def foreground_text(self):
         self.layout()
         self.tela.title("FOREGROUND COLOR")
