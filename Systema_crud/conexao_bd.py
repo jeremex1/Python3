@@ -55,12 +55,8 @@ class Conexao():
     def connect(self):
 
         try:
-            self.conn = connect(user="jeremias",password=self.entry_password.get(),
-            host="localhost",port="3306",database="Cliente")
-
-            #self.conn = connect(user=self.entry_user.get(),password=self.entry_password.get(),
-            #host=self.entry_host.get(),port=self.entry_port.get(),database=self.entry_database.get())
-            
+            self.conn = connect(user=self.entry_user.get(),password=self.entry_password.get(),
+            host=self.entry_host.get(),port=self.entry_port.get(),database=self.entry_database.get())
 
         except Exception as e:
             tk.messagebox.showerror("falha no login",e)
