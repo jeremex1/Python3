@@ -14,7 +14,7 @@ class Cores(tk.Frame, cor.Cores, menu.Menu):
     def __init__(self, master):
         super().__init__(master)
         self.master.title("TEXTO")
-        self.master.geometry("500x500+100+100")
+        self.master.geometry("700x700+100+100")
         self.master.configure(bd="2",relief='raised')#tiposs de bd (groove,suken,raised,solid,raidge)
         self.label=tk.Label(self.master,text='Undefild')
         self.label.pack()
@@ -51,7 +51,7 @@ class Cores(tk.Frame, cor.Cores, menu.Menu):
     def layout(self):
         self.tela = tk.Tk()
         self.tela.title("BACKGROUND")
-        self.tela.geometry("380x200+150+280")
+        self.tela.geometry("145x200+800+280")
         self.listbox = tk.Listbox(self.tela)
         self.listbox.configure(justify="center")
         self.listbox.bind("<<ListboxSelect>>",self.copy)
@@ -85,10 +85,11 @@ class Cores(tk.Frame, cor.Cores, menu.Menu):
 
         
         self.layout()
-        self.tela.title("BACKGROUND COLOR")
         self.message = tk.messagebox.askyesno("Color Background","deseja altera a cor de fundo")
+       # self.tela.title("BACKGROUND COLOR")
         if (self.message==True):
         	self.text.configure(bg = self.corente_cor)
+
     def foreground_text(self):
         self.layout()
         self.tela.title("FOREGROUND COLOR")
