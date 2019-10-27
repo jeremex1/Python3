@@ -2,3 +2,4 @@
 .ven
 .py[code]
 *.sqlite3
+_pycache_
