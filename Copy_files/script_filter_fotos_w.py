@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #####VERSION FOR WINDOWS####
 ##copias as Imagens selecionadas para uma pasta que sera criada se nao existir
 
