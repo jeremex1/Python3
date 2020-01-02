@@ -1,3 +1,4 @@
+#!/usr/bin/python3.7
 from tkinter import Label, Frame, Button, Entry,Menu
 import tkinter as tk
 class Calc_juros(tk.Frame):
